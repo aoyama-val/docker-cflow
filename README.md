@@ -10,5 +10,5 @@
 ## Usage
 
 ```
-docker run --rm -v $(pwd):/root cflow cflow /root/sample.c
+docker run --rm -v $(pwd):/root cflow cflow sample.c
 ```

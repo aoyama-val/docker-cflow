@@ -9,4 +9,5 @@ RUN \
     cd cflow-* && \
     ./configure && make && make install
 
+WORKDIR "/root"
 CMD ["/usr/local/bin/cflow", "--help"]
