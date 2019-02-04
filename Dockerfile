@@ -1,9 +1,8 @@
-FROM ubuntu:latest
+FROM alpine:latest
 
 RUN \
     echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile && \
-    apt-get -y update && \
-    apt-get install -y wget make gcc && \
+    apk --update add musl-dev wget make gcc && rm -rf /var/cache/apk/* \
     cd /root && \
     wget "https://ftp.gnu.org/gnu/cflow/cflow-latest.tar.gz" && \
     tar xvf cflow-latest.tar.gz && \
